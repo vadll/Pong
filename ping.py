@@ -32,7 +32,8 @@ class GameSprite(sprite.Sprite):
         window.blit(self.image, (self.rect.x, self.rect.y))
 
 ball = GameSprite('ball.png', 200, 200, 50, 50, 99)
-
+rocket = GameSprite('poloska.png', 10, 10, 5, 100, 99)
+rocket2 = GameSprite('poloska2.png', 580, 10, 5, 100, 99)
 clock = time.Clock()
 FPS = 60
 game = True
@@ -46,4 +47,5 @@ while game:
     clock.tick(FPS)
     
     ball.reset()
-    ball.update_r()
+    rocket.reset()
+    rocket2.reset()
